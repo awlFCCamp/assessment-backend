@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Assessment | AngelaCodes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100;1,300&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="container">
+    <div class="motivation">
+      <h2>Daily Motivation</h2>
+      <div>
+        <button id="complimentButton" class="btn">Get a compliment</button>
+        <button id="fortuneButton" class="btn">Get a fortune</button>
+      </div>
+    </div>
+    <div class="coding-task">
+      <div class="crud">
+        <h2>Let's document our daily coding challenges</h2>
+        <section>
+          <h4>Add a new challenge</h4>
+          <form id="add-challenge">
+            <label for="newChallenge">challenge:</label>
+            <input
+              type="text"
+              id="newChallenge"
+              placeholder="enter daily challenge name..."
+            />
+            <br />
+            <br />
+            <label for="newDifficultyLevel">DifficultyLevel:</label>
+            <select id="newDifficultyLevel">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <br />
+            <br />
+            <label for="newChallengeDate">challenge Date:</label>
+            <input type="date" id="newChallengeDate" />
+            <br />
+            <br />
+            <button type="submit" class="btn">Add the challenge</button>
+          </form>
+        </section>
+        <div class="line"></div>
+        <section>
+          <h4>Update challenge</h4>
+          <form id="update-form">
+            <label for="challenge-id">challenge Id:</label>
+            <input type="number" id="challenge-id" />
+            <br />
+            <br />
+            <label for="update-challenge">Challenge Name:</label>
+            <input
+              type="text"
+              id="update-challenge"
+              placeholder="enter challenge to update"
+            />
+            <br />
+            <br />
+            <label for="update-difficultyLevel">DifficultyLevel:</label>
+            <select id="update-difficultyLevel">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <br />
+            <br />
+            <label for="update-challengeDate">challenge Date:</label>
+            <input type="date" id="update-challengeDate" />
+            <br />
+            <br />
+            <button type="submit" class="btn">Update the Challenge</button>
+          </form>
+        </section>
+
+        <section id="display-section"></section>
+      </div>
+      <div class="search">
+        <section class="request-area">
+          <section class="request-type">
+            <h2>Get All Challenges</h2>
+            <button id="getSubmit" class="btn getAllChallenges">
+              Get All Challenges
+            </button>
+          </section>
+          <section class="request-type">
+            <h4>Search Challenge with id</h4>
+            <input
+              type="'text"
+              id="searchId"
+              placeholder="enter a challenge id to search......"
+            />
+            <button id="searchIdBtn" class="btn">Search</button>
+          </section>
+          <!--<section class="request-type">
+            <h4>Inventory Name Search</h4>
+            <input type="text" id="query-input" />
+            <button id="getQuerySubmit" class="btn">Search</button>
+          </section>-->
+        </section>
+        <section class="response-area">
+          <ul>
+            <li>Choose an option above</li>
+            <li>Click the button</li>
+            <li>The result will show left bottom</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
