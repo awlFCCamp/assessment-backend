@@ -46,6 +46,8 @@ module.exports = {
       "Believe in yourself and others will too.",
       "Dedicate yourself with a calm mind to the task at hand.",
       "Don’t confuse recklessness with confidence.",
+      "For the things we have to learn before we can do them, we learn by doing them.",
+      "Physical activity will dramatically improve your outlook today.",
     ];
     const randomFortuneId = Math.floor(Math.random() * fortunes.length);
     const randomFortune = fortunes[randomFortuneId];

@@ -110,6 +110,10 @@ const updateHandler = (e) => {
     )
     .then((res) => createChallengeCard(res.data))
     .catch((err) => console.error(err));
+  challengeId.value = "";
+  updateChallenge.value = "";
+  updateDifficultyLevel.value = "";
+  updateChallengeDate.value = "";
 };
 
 //event-listeners
